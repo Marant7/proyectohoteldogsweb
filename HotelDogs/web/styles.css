@@ -1,0 +1,915 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: left;
+    position: relative;
+  
+}
+
+header h1 {
+    margin: 0;
+    padding: 0 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+nav {
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+main {
+    padding: 10px;
+    text-align: center;
+    min-height: 800px;
+}
+
+
+.hero {
+    background: url('images/fondo.png') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #FFD700;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #FFC700;
+}
+
+.carousel {
+    position: relative;
+    max-width: 85%;
+    margin: 20px auto;
+    overflow: hidden;
+    aspect-ratio: 16 / 9; /* Mantener una proporción de 16:9 */
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.carousel-slide {
+    display: flex;
+    width: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    object-fit: cover; /* Asegura que las imágenes cubran el área del contenedor sin distorsionarse */
+    flex-shrink: 0;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2em;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+.about,
+.services,
+.testimonials {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: white;
+    margin: 20px auto;
+    max-width: 1800px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.about h2, .services h2, .testimonials h2 {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+.about p, .services p, .testimonials p {
+    font-size: 2em;
+    line-height: 1.6;
+}
+.services h3{
+     font-size: 3em;
+    margin-bottom: 30px;
+}
+.services .service-item {
+    margin: 20px 0;
+}
+
+.services .service-item {
+    margin: 20px 0;
+}
+.services .service-item img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.login-container {
+    width: 300px;
+    margin: 150px auto;
+    background-color: #fff;
+    padding: 65px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.login-container a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.login-container a:hover {
+    color: #575757;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+    background-color: #575757;
+}
+
+.testimonials h3 {
+    margin-top: 0;
+}
+
+
+
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinea las imágenes al centro */
+    gap: 10px;
+}
+
+.image-gallery img {
+    width: 100%;
+    max-height: 264px;
+    object-fit: cover;
+    max-width: 447px;
+    border-radius: 23px;
+    margin-top: 20px;
+    padding: 0; /* Quita el padding izquierdo */
+}
+
+.image-gallery img:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: #5a3e95;
+    color: #fff;
+    text-align: left;
+    padding: 20px 0;
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 10px;
+    text-align: left;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.footer-section p {
+    margin: 5px 0;
+}
+
+.footer-section .social-icons {
+        display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 10px;
+    align-content: flex-end;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.footer-section .social-icons img {
+    width: 24px; /* Tamaño ajustado de los iconos sociales */
+    height: 24px; /* Tamaño ajustado de los iconos sociales */
+}
+
+.footer-bottom {
+    background-color: #4a2f75;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+/* Agrega esto al final de tu archivo styles.css */
+
+.register-container {
+    width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-top: 50px;
+}
+
+.register-container h2 {
+    margin-bottom: 20px;
+}
+
+.register-container .profile-picture {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    overflow: hidden;
+}
+
+.register-container .profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.register-container .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.register-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.register-container .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.register-container .form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-container .form-group button:hover {
+    background-color: #575757;
+}
+
+
+/* dsds */
+
+.dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 15px 11px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #575757;
+        }
+        
+ /* perfil */
+ 
+ .profile-container {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-top: 50px;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info {
+    text-align: left;
+    width: 100%;
+}
+
+.profile-info h3 {
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    margin: 5px 0;
+}
+
+/* mascota */
+
+.registermascota-container {
+    width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-top: 50px;
+}
+
+.registermascota-container h2 {
+    margin-bottom: 20px;
+}
+
+.registermascota-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.registermascota-container .profile-picture {
+    width: 300px;
+    height: 300px;
+    border: 2px solid #ddd;
+    overflow: hidden;
+}
+
+.registermascota-container .profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.form-fields {
+    flex: 1;
+}
+
+.form-fields .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-fields .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-fields .form-group input, .form-fields .form-group textarea, .form-fields .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-fields .form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-fields .form-group button:hover {
+    background-color: #575757;
+}
+
+/*tb*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.dormitorios {
+      display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: space-between;
+}
+
+.dormitorio {
+    text-align: center;
+    margin: 10px;
+}
+
+.dormitorio img {
+    width: 50px; /* Ajusta el tamaño de las imágenes según tus necesidades */
+    height: 50px;
+    cursor: pointer;
+}
+
+.tablaverreservas {
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+     min-height: 600px; /* Asegura que haya un mínimo de altura */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+}
+
+.tablaverreservas h2 {
+    text-align: center;
+}
+
+.tablaverreservas table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.tablaverreservas table th,
+.tablaverreservas table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.tablaverreservas table th {
+    background-color: #F28383 ;
+    color: white;
+}
+
+.tablaverreservas table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tablaverreservas table tr:hover {
+    background-color: #ddd;
+}
+.tablalistarmascotas {
+    background-color: white;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 1200px;
+    min-height: 600px; /* Asegura que haya un mínimo de altura */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+}
+
+.tablalistarmascotas h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+.tablalistarmascotas table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.tablalistarmascotas table th,
+.tablalistarmascotas table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.tablalistarmascotas table th {
+    background-color: #F28383;
+    color: white;
+}
+
+.tablalistarmascotas table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tablalistarmascotas table tr:hover {
+    background-color: #ddd;
+}
+
+.tablalistarmascotas .hidden {
+    display: none;
+}
+.mostrarhabitacionescontainer {
+    background-color: white;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 1500px;
+}
+
+.mostrarhabitacionescontainer main {
+    display: flex;
+    flex-direction: column;
+}
+
+.mostrarhabitacionescontainer h2 {
+   text-align: center;
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+.dormitorios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.dormitorio {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dormitorio img {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+}
+
+.dormitorio a img {
+    transition: transform 0.3s ease;
+}
+
+.dormitorio a img:hover {
+    transform: scale(1.1);
+}
+.registromascota {
+    background-color: white;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+}
+
+.registromascota h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #13B6EA ;
+}
+
+.registromascota form {
+    display: flex;
+    flex-direction: column;
+}
+
+.registromascota label {
+    margin: 10px 0 5px;
+}
+
+.registromascota input[type="text"],
+.registromascota input[type="number"],
+.registromascota select,
+.registromascota textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.registromascota textarea {
+    resize: vertical;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #f4f4f4;
+    margin-bottom: 10px;
+}
+
+.custom-file-upload::before {
+    content: 'Seleccionar archivo';
+    display: inline-block;
+    background: #4CAF50;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.custom-file-upload input[type="file"] {
+    display: none;
+}
+
+.registromascota input[type="submit"] {
+    background-color: #13B6EA ;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    align-self: center; /* Center the button horizontally */
+}
+
+.registromascota input[type="submit"]:hover {
+    background-color: #3BA8CB ;
+}
+
+.crearreservacontainer {
+    background-color: white;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+}
+
+.crearreservacontainer main {
+    display: flex;
+    flex-direction: column;
+}
+
+.crearreservacontainer h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color:#18BBF0 ;
+}
+
+.crearreservacontainer form {
+    display: flex;
+    flex-direction: column;
+}
+
+.crearreservacontainer label {
+    margin: 10px 0 5px;
+}
+
+.crearreservacontainer input[type="text"],
+.crearreservacontainer input[type="number"],
+.crearreservacontainer input[type="date"],
+.crearreservacontainer input[type="time"],
+.crearreservacontainer select,
+.crearreservacontainer textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.crearreservacontainer select[multiple] {
+    height: auto; /* Ensure multiple select box is auto-height */
+}
+
+.crearreservacontainer button {
+    background-color: #0EB9F0 ;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    align-self: center; /* Center the button horizontally */
+}
+
+.crearreservacontainer button:hover {
+    background-color: #58ACC7 ;
+}
+
+#cuentabancaria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#cuentabancaria img {
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.editarmascota-container {
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+}
+
+.editarmascota-container h1 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+.editarmascota-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.editarmascota-container label {
+    margin: 10px 0 5px;
+}
+
+.editarmascota-container input[type="text"],
+.editarmascota-container input[type="number"],
+.editarmascota-container textarea,
+.editarmascota-container select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.editarmascota-container input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.editarmascota-container input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.editarmascota-container a {
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.editarmascota-container a:hover {
+    text-decoration: underline;
+}
